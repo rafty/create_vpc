@@ -65,7 +65,7 @@ class CreateVpcStack(Stack):
 
         print('-----------subnet tagging-----------------------')
 
-        eks_cluster_name = ['gitops_eks', 'argocd']
+        eks_cluster_name = ['gitops_eks', 'app_eks']
 
         self.tag_all_subnets(vpc.public_subnets, 'kubernetes.io/role/elb', '1')
         self.tag_all_subnets(vpc.private_subnets, 'kubernetes.io/role/internal-elb', '1')
